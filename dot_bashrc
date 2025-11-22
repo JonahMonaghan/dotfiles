@@ -23,3 +23,10 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 unset rc
+
+# Aliases
+alias nvim='vim'
+
+# Environment variables
+export EDITOR='nvim'
+export VISUAL='nvim'
