@@ -50,3 +50,6 @@
 
 #THEME
 theme = GitHub Dark High Contrast
+
+#ADDITIONAL CONFIG FILES
+config-file = fonts/font_current.conf
