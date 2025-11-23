@@ -51,5 +51,8 @@
 #THEME
 theme = GitHub Dark High Contrast
 
+#FONT
+font-family = "JetBrains Mono Nerd Font"
+
 #ADDITIONAL CONFIG FILES
 config-file = fonts/font_current.conf

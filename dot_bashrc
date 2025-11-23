@@ -31,3 +31,6 @@ alias moi='chezmoi'
 # Environment variables
 export EDITOR='nvim'
 export VISUAL='nvim'
+
+# Shell Prompt
+eval "$(oh-my-posh init bash)"
