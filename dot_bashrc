@@ -33,4 +33,4 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 
 # Shell Prompt
-eval "$(oh-my-posh init bash)"
+eval "$(oh-my-posh init bash --config 'atomic')"
