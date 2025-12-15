@@ -1,7 +1,6 @@
 return {
 	"ibhagwan/fzf-lua",
 	dependencies = {"nvim-mini/mini.icons"},
-	
 	keys = {
 		{"<Leader>pf", "<cmd>FzfLua files<cr>", desc = "Project Files"},
 		{"<Leader>ps", "<cmd>FzfLua live_grep<cr>", desc = "Project Search (Text)"},
