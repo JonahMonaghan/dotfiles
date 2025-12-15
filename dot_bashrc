@@ -34,8 +34,15 @@ export VISUAL='nvim'
 
 # Shell Prompt
 if command -v oh-my-posh &> /dev/null; then
+
+    THEME_CONFIG="kushal"
+    
+    if [ -f /run/.containerenv ]; then
+        THEME_CONFIG="hul10"
+    fi
+
     # 2. If it exists, initialize it
-    eval "$(oh-my-posh init bash --config 'atomic')"
+    eval "$(oh-my-posh init bash --config "$THEME_CONFIG")"
 else
     # 3. Fallback: If not found, use a simple standard prompt (so you aren't left blind)
     PS1='[\u@\h \W]\$ '
