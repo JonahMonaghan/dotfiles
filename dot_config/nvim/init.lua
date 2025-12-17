@@ -1,9 +1,11 @@
 vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.maplocalleader = ","
 
 require("config.lazy")
 
-vim.cmd.colorscheme("habamax")
+require("config.theme")
+
+vim.opt.number = true
 
 vim.filetype.add({
 	extension = {
