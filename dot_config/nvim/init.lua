@@ -11,5 +11,6 @@ vim.filetype.add({
 	extension = {
 		v = "verilog",
 		vh = "verilog",
+		p8 = "pico-8",
 	},
 })
