@@ -43,9 +43,9 @@ return {
 
                 vim.lsp.start({
                     name = "clangd",
-                    cmd = { 
-                        "clangd", 
-                        "--background-index", 
+                    cmd = {
+                        "clangd",
+                        "--background-index",
                         "--clang-tidy",
                         "--header-insertion=iwyu",
                         "--completion-style=detailed",
@@ -74,7 +74,24 @@ return {
                 })
             end,
         })
-        
+
+	vim.api.nvim_create_autocmd("FileType", {
+		pattern = { "pico8" },
+		callback = function(args)
+			local root_dir = vim.fs.root(args.buf, { ".git", "*.p8"})
+			if not root_dir then
+				root_dir = vim.fs.dirname(vim.api.nvim_buf_get_name(args.buf))
+			end
+
+			vim.lsp.start({
+				name = "pico8_ls",
+				cmd = { "pico8-ls", "--stdio" },
+				root_dir = root_dir,
+				capabilities = capabilities,
+			})
+		end,
+	})
+
         -- Keymaps (Only load when LSP attaches)
         vim.api.nvim_create_autocmd('LspAttach', {
             callback = function(ev)
